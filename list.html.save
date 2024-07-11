@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>List of Loads</title>
+</head>
+<body>
+    <h1>List of Loads</h1>
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('new_load') }}">Add New Load</a>
+
+       <table border=1>
+
+        {% for load in loads %}
+
+        <tr>
+          <td>
+
+            {{ load.nameBrand }} 
+          </td>
+          <td>
+
+            {{ load.number }} 
+          </td>
+          <td>
+
+            {{ load.day_duration }} 
+            {{ load.night_duration }}
+          </td>
+          <td> 
+
+
+            <a href="{{ url_for('update_load', id=load.id) }}" >Edit</a>
+               </td>
+          <td>
+
+            
+            <a href="{{ url_for('delete_load', id=load.id) }}">Delete</a>
+                 </td>
+               </tr>
+
+        {% endfor %}
+    </table>
+</body>
+</html>

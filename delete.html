@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Load</title>
+</head>
+<body>
+    <h1>Delete Load</h1>
+    <p>Are you sure you want to delete {{ load.nameBrand }}?</p>
+       
+
+    <form method="POST">
+        <button type="submit">Yes, Delete</button>
+        <a href="{{ url_for('list_loads') }}">Cancel</a>
+    </form>
+</body>
+</html>

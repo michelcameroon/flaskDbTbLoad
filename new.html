@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Load</title>
+</head>
+<body>
+    <h1>Add New Load</h1>
+         <a href="{{ url_for('index') }}">Home</a>
+
+
+      <table border=1>
+       
+    <form method="POST">
+
+      <tr>
+      <td>
+        <label for="nameBrand">Name Brand:</label>
+
+          </td>
+     <td>
+
+        <input type="text" id="nameBrand" name="nameBrand" required><br>
+        
+             </td>
+     </tr>
+     <tr>
+      <td>
+
+        <label for="powerWatts">powerWatts:</label>
+                </td>
+             <td>
+
+        <input type="number" id="powerWatts" name="powerWatts" value="{{ powerWatts }}" required><br>
+   
+          </td>
+     </tr>
+     <tr>
+      <td>
+
+        <label for="number">number:</label>
+
+          </td>
+         <td>
+
+        <input type="number" id="number" name="number" value="{{ number }}" required><br>
+
+                     </td>
+     </tr>
+     <tr>
+      <td>
+
+        <label for="day_duration">day_duration:</label>
+             </td>
+         <td>
+
+
+        <input type="number" id="day_duration" name="day_duration" value="{{ day_duration }}" required><br>        
+          </td>
+     </tr>
+     <tr>
+      <td>
+
+          
+        <label for="night_duration">night_duration:</label>
+           </td>
+     <td>
+
+
+        <input type="number" id="night_duration" name="night_duration" value="{{ night_duration }}" required><br>
+
+             </td>
+     </tr>
+     <tr>
+      <td>
+ 
+
+
+        <button type="submit">Add Load</button>
+
+          </td>
+     </tr>
+
+    </form>
+
+    </table>
+
+</body>
+</html>
